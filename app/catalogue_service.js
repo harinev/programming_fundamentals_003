@@ -50,40 +50,40 @@ function countBooksByFirstLetter(letter) {
     if (letter.toLowerCase() === catalogue[i][0]) {
       firstLetterCount += 1;
     }
-}
-return firstLetterCount;
+  }
+  return firstLetterCount;
 }
 
 
 function getQuantity(title) {
   let quantityCount = 0;
-for (let i=0; i<catalogue.length; i++) {
-  if (title === catalogue[i].title) {
-    quantityCount =  catalogue[i].quantity;
+  for (let i = 0; i < catalogue.length; i++) {
+    if (title === catalogue[i].title) {
+      quantityCount = catalogue[i].quantity;
+    }
   }
-}
-return quantityCount;
+  return quantityCount;
 }
 
 function getBooksByAuthor(author) {
-let bookDetails = [];
-for (let i=0; i<catalogue.length; i++) {
-  if (author === catalogue[i].author) {
-    bookDetails.push(catalogue[i])
+  let bookDetails = [];
+  for (let i = 0; i < catalogue.length; i++) {
+    if (author === catalogue[i].author) {
+      bookDetails.push(catalogue[i])
+    }
   }
-}
-return bookDetails;
+  return bookDetails;
 }
 
 function checkQuantity(title, quantity) {
-for (let i=0; i<catalogue.length; i++) {
-  let catalogueTitle = catalogue[i].title;
-  let catalogueQuantity = catalogue[i].quantity;
-  if (title === catalogueTitle && quantity === catalogueQuantity) {
-    return true;
+  for (let i = 0; i < catalogue.length; i++) {
+    let catalogueTitle = catalogue[i].title;
+    let catalogueQuantity = catalogue[i].quantity;
+    if (title === catalogueTitle && quantity === catalogueQuantity) {
+      return true;
+    }
   }
-}
-return false;
+  return false;
 }
 
 module.exports = {
